@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garanti BBVA - Geleceği Birlikte Tasarlıyoruz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="ust-uyari">
+        Bu site Web Tasarım dersi kapsamında yapılmıştır ve sitedeki bilgilerin geçerliliği yoktur.
+    </div>
+
+    <header class="site-header">
+        <div class="logo-alani">
+            <a href="index.html"><img src="images/logo.png" alt="Garanti BBVA Logo"></a>
+        </div>
+        <nav class="ana-menu" aria-label="Ana Menü">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="kartlar.html">Kartlar</a></li>
+                <li><a href="hesaplama.html">Hesaplama</a></li>
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+        <div class="header-sag">
+            <input type="text" id="arama-cubugu" placeholder="Arama yapın..." aria-label="Site içinde arama yap">
+            <button class="btn-uye-girisi" id="btn-uye-girisi" onclick="uyeGirisiDurumuKontrol()">Üye Girişi</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="doviz-seridi">
+            <div class="doviz-deger" id="doviz-usd">
+                <span>USD</span> 
+                <span id="fiyat-usd">-</span> 
+                <span class="doviz-oran" id="oran-usd">-</span>
+            </div>
+            <div class="doviz-deger" id="doviz-eur">
+                <span>EUR</span> 
+                <span id="fiyat-eur">-</span> 
+                <span class="doviz-oran" id="oran-eur">-</span>
+            </div>
+            <div class="doviz-deger" id="doviz-gram">
+                <span>GRAM ALTIN</span> 
+                <span id="fiyat-gram">-</span> 
+                <span class="doviz-oran" id="oran-gram">-</span>
+            </div>
+            <div class="doviz-deger" id="doviz-ceyrek">
+                <span>ÇEYREK ALTIN</span> 
+                <span id="fiyat-ceyrek">-</span> 
+                <span class="doviz-oran" id="oran-ceyrek">-</span>
+            </div>
+        </div>
+
+        <section class="slider-konteyner">
+            
+            <div class="slayt slayt-aktif">
+                <img src="images/80_yildir_yarinlardayiz_sergisi_2560x1071.jpg" alt="80 Yıldır Yarınlardayız">
+            </div>
+
+            <div class="slayt css-pankart" style="position: relative;">
+                <img src="images/emekliler.png" alt="Emeklilere Özel Promosyon" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 34, 68, 0.4); z-index: 1;"></div>
+                <div class="pankart-icerik" style="position: relative; z-index: 2;">
+                    <h2>Emeklilerimize Özel Promosyon!</h2>
+                    <p>Maaşını Garanti BBVA'ya taşıyan emeklilerimize anında 15.000 TL'ye varan nakit promosyon fırsatı.</p>
+                    <a href="hizmetler.html" class="btn-daha-fazla">Detaylı Bilgi</a>
+                </div>
+            </div>
+
+            <div class="slayt css-pankart" style="position: relative;">
+                <img src="images/yeni-musteri.png" alt="Yeni Müşterilere Özel Fırsatlar" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 168, 89, 0.4); z-index: 1;"></div>
+                <div class="pankart-icerik" style="position: relative; z-index: 2;">
+                    <h2>Yeni Müşterilere Müjde!</h2>
+                    <p>Garanti BBVA Mobil'den müşteri olun, anında 20.000 TL'ye varan faizsiz taksitli nakit avans ayrıcalığını kaçırmayın.</p>
+                    <a href="hesaplama.html" class="btn-daha-fazla">Hemen Başvur</a>
+                </div>
+            </div>
+
+            <div class="slayt css-pankart" style="position: relative;">
+                <img src="images/hero-bg.jpeg" alt="Garanti BBVA Genel Müdürlük" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 34, 68, 0.6); z-index: 1;"></div>
+                <div class="pankart-icerik" style="position: relative; z-index: 2;">
+                    <h2>Geleceğin Bankacılığı</h2>
+                    <p>Güçlü altyapımız, yenilikçi vizyonumuz ve uzman kadromuzla Türkiye'nin her yerinde yanınızdayız.</p>
+                    <a href="kurumsal.html" class="btn-daha-fazla">Kurumsal Değerlerimiz</a>
+                </div>
+            </div>
+
+            <button class="slider-ok ok-sol" onclick="slaytDegistir(-1)">&#10094;</button>
+            <button class="slider-ok ok-sag" onclick="slaytDegistir(1)">&#10095;</button>
+
+            <div class="slider-noktalar">
+                <span class="nokta nokta-aktif" onclick="slaytaGit(0)"></span>
+                <span class="nokta" onclick="slaytaGit(1)"></span>
+                <span class="nokta" onclick="slaytaGit(2)"></span>
+                <span class="nokta" onclick="slaytaGit(3)"></span>
+            </div>
+        </section>
+
+        <section class="ana-icerik">
+            <h2 class="bolum-baslik">Hizmetlerimiz</h2>
+            <p class="bolum-aciklama">İşinizi büyütmeniz için ihtiyaç duyduğunuz çözümleri profesyonel ekibimizle sunuyoruz.</p>
+            
+            <div class="hizmet-kartlari">
+                <article class="kart">
+                    <img src="images/hizmet-1.png" alt="Bireysel Krediler" class="hizmet-ikon">
+                    <h3>Bireysel Krediler</h3>
+                    <p>İhtiyaçlarınıza özel esnek ödeme planlarıyla yanınızdayız.</p>
+                    <a href="hizmetler.html" class="detay-link">Detaylar &rarr;</a>
+                </article>
+
+                <article class="kart">
+                    <img src="images/hizmet-2.png" alt="Yatırım Araçları" class="hizmet-ikon">
+                    <h3>Yatırım Araçları</h3>
+                    <p>Birikimlerinizi güvenle değerlendirin ve geleceğinize yatırım yapın.</p>
+                    <a href="hizmetler.html" class="detay-link">Detaylar &rarr;</a>
+                </article>
+
+                <article class="kart">
+                    <img src="images/hizmet-3.png" alt="Kredi Kartları" class="hizmet-ikon">
+                    <h3>Kredi Kartları</h3>
+                    <p>Size özel ayrıcalıklar ve kampanyalarla dolu dünyamızı keşfedin.</p>
+                    <a href="kartlar.html" class="detay-link">Detaylar &rarr;</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-konteyner">
+            <div class="footer-sutun">
+                <h3>Garanti BBVA</h3>
+                <p>Geleceği birlikte tasarlıyor, yenilikçi ve dijital finansal çözümlerimizle her adımda yanınızda oluyoruz.</p>
+                <div class="sosyal-medya">
+                    <a href="#">FB</a>
+                    <a href="#">X</a>
+                    <a href="#">IG</a>
+                    <a href="#">LN</a>
+                </div>
+            </div>
+
+            <div class="footer-sutun">
+                <h3>Hızlı Linkler</h3>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hizmetler.html">Hizmetler</a></li>
+                    <li><a href="kurumsal.html">Kurumsal</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-sutun">
+                <h3>Hizmetlerimiz</h3>
+                <ul>
+                    <li><a href="hizmetler.html">Bireysel Krediler</a></li>
+                    <li><a href="hizmetler.html">Yatırım Araçları</a></li>
+                    <li><a href="kartlar.html">Bonus Dünyası</a></li>
+                    <li><a href="hesaplama.html">Kredi Hesaplama</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-sutun">
+                <h3>İletişim Bilgileri</h3>
+                <p><strong>Müşteri Merkezi:</strong> 444 0 333</p>
+                <p><strong>E-posta:</strong> info@garantibbva.com.tr</p>
+                <p><strong>Genel Müdürlük:</strong> Nispetiye Mah. Aytar Cad. No:2 34340 Levent - Beşiktaş / İstanbul</p>
+            </div>
+        </div>
+
+        <div class="footer-alt">
+            <p>&copy; 2026 Garanti BBVA Projesi. Tüm hakları saklıdır. Berat Yıldırım - 221120251038</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

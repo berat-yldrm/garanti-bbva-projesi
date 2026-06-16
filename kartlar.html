@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kartlarımız - Garanti BBVA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="ust-uyari">
+        Bu site Web Tasarım dersi kapsamında yapılmıştır ve sitedeki bilgilerin geçerliliği yoktur.
+    </div>
+    
+    <header class="site-header">
+        <div class="logo-alani">
+            <a href="index.html"><img src="images/logo.png" alt="Garanti BBVA Logo"></a>
+        </div>
+        <nav class="ana-menu" aria-label="Ana Menü">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="hizmetler.html">Hizmetler</a></li>
+                <li><a href="kartlar.html">Kartlar</a></li>
+                <li><a href="hesaplama.html">Hesaplama</a></li>
+                <li><a href="kurumsal.html">Kurumsal</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+        <div class="header-sag">
+            <input type="text" id="arama-cubugu" placeholder="Arama yapın..." aria-label="Site içinde arama yap">
+            <button class="btn-uye-girisi" onclick="uyeGirisiDurumuKontrol()">Üye Girişi</button>
+        </div>
+    </header>
+
+    <section class="alt-sayfa-hero">
+        <h1>Kredi Kartlarımız ve Kampanyalar</h1>
+        <p>Ayrıcalıklarla dolu dünyamızı keşfedin, size en uygun kartı hemen seçin.</p>
+    </section>
+
+    <section class="ana-icerik">
+        <h2 class="bolum-baslik">Kredi Kartlarımız</h2>
+        <p class="bolum-aciklama">İhtiyacınıza en uygun kartı seçerek Garanti BBVA ayrıcalıklarından yararlanmaya başlayın.</p>
+        
+        <div class="hizmet-kartlari">
+            <div class="kart">
+                <img src="images/bonus.png" alt="Bonus Card" style="width: 100%; max-width: 220px; height: auto; margin-bottom: 15px;">
+                <h3>Bonus Card</h3>
+                <p>Türkiye'nin en çok kazandıran kartı ile alışverişlerinizde bol bol Bonus kazanın.</p>
+                <ul style="text-align: left; margin-bottom: 20px; color: #555; list-style-type: none; font-size: 14px; line-height: 1.8;">
+                    <li>✔️ Taksitli alışveriş imkanı</li>
+                    <li>✔️ Yüzbinlerce üye iş yeri</li>
+                    <li>✔️ Temassız ödeme kolaylığı</li>
+                </ul>
+                <a href="hesaplama.html" class="btn-daha-fazla" style="display: block; text-align: center;">Hemen Başvur</a>
+            </div>
+
+            <div class="kart">
+                <img src="images/miles.png" alt="Miles & Smiles" style="width: 100%; max-width: 220px; height: auto; margin-bottom: 15px;">
+                <h3>Miles & Smiles</h3>
+                <p>Uçuş mili kazandıran, seyahatlerinizde size özel ayrıcalıklar tanıyan prestijli kart.</p>
+                <ul style="text-align: left; margin-bottom: 20px; color: #555; list-style-type: none; font-size: 14px; line-height: 1.8;">
+                    <li>✔️ Türk Hava Yolları ayrıcalıkları</li>
+                    <li>✔️ Ücretsiz Lounge erişimi</li>
+                    <li>✔️ Seyahat sigortası</li>
+                </ul>
+                <a href="hesaplama.html" class="btn-daha-fazla" style="display: block; text-align: center;">Hemen Başvur</a>
+            </div>
+
+             <div class="kart">
+                <img src="images/shop.png" alt="Shop & Fly" style="width: 100%; max-width: 220px; height: auto; margin-bottom: 15px;">
+                <h3>Shop & Fly</h3>
+                <p>Her harcamada mil kazandıran ve sizi özgürce uçuracak olan seyahat kartımız.</p>
+                <ul style="text-align: left; margin-bottom: 20px; color: #555; list-style-type: none; font-size: 14px; line-height: 1.8;">
+                    <li>✔️ Her 1 TL'ye 1 Mil</li>
+                    <li>✔️ Rötar sigortası</li>
+                    <li>✔️ Tüm hava yollarında geçerli</li>
+                </ul>
+                <a href="hesaplama.html" class="btn-daha-fazla" style="display: block; text-align: center;">Hemen Başvur</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ana-icerik" style="background-color: #ffffff; border-top: 4px solid #e1e8e5; padding-top: 40px;">
+        <h2 class="bolum-baslik" style="border-bottom-color: #00a859;">Güncel Kampanyalar</h2>
+        <p class="bolum-aciklama">Kartınıza özel fırsatları kaçırmayın, alışverişlerinizde daha fazla kazanın.</p>
+        
+        <div class="hizmet-kartlari">
+            <div class="kart" style="border-top: 5px solid #0055a6;">
+                <h3 style="color: #0055a6;">Market Alışverişinize 500 TL Bonus!</h3>
+                <p>Bu ay market ve bakkal harcamalarınızda toplam 500 TL'ye varan ekstra Bonus kazanma fırsatı.</p>
+                <a href="#" class="detay-link">Kampanyaya Katıl &rarr;</a>
+            </div>
+            
+            <div class="kart" style="border-top: 5px solid #0055a6;">
+                <h3 style="color: #0055a6;">Eğitimde 3 Taksit Fırsatı</h3>
+                <p>Eğitim ve kırtasiye harcamalarınızda vade farksız 3 taksit avantajından hemen faydalanın.</p>
+                <a href="#" class="detay-link">Kampanyaya Katıl &rarr;</a>
+            </div>
+            
+            <div class="kart" style="border-top: 5px solid #0055a6;">
+                <h3 style="color: #0055a6;">Yurt Dışı Uçak Biletinde İndirim</h3>
+                <p>Miles & Smiles kartınızla alacağınız yurt dışı biletlerde anında %20 indirim sizi bekliyor.</p>
+                <a href="#" class="detay-link">Kampanyaya Katıl &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-konteyner">
+            <div class="footer-sutun">
+                <h3>Garanti BBVA</h3>
+                <p>Geleceği birlikte tasarlıyor, yenilikçi ve dijital finansal çözümlerimizle her adımda yanınızda oluyoruz.</p>
+                <div class="sosyal-medya">
+                    <a href="#">FB</a>
+                    <a href="#">X</a>
+                    <a href="#">IG</a>
+                    <a href="#">LN</a>
+                </div>
+            </div>
+            <div class="footer-sutun">
+                <h3>Hızlı Linkler</h3>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hizmetler.html">Hizmetler</a></li>
+                    <li><a href="kurumsal.html">Kurumsal</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-sutun">
+                <h3>Hizmetlerimiz</h3>
+                <ul>
+                    <li><a href="hizmetler.html">Bireysel Krediler</a></li>
+                    <li><a href="hizmetler.html">Yatırım Araçları</a></li>
+                    <li><a href="kartlar.html">Bonus Dünyası</a></li>
+                    <li><a href="hesaplama.html">Kredi Hesaplama</a></li>
+                </ul>
+            </div>
+            <div class="footer-sutun">
+                <h3>İletişim Bilgileri</h3>
+                <p><strong>Müşteri Merkezi:</strong> 444 0 333</p>
+                <p><strong>E-posta:</strong> info@garantibbva.com.tr</p>
+                <p><strong>Genel Müdürlük:</strong> Nispetiye Mah. Aytar Cad. No:2 34340 Levent - Beşiktaş / İstanbul</p>
+            </div>
+        </div>
+        <div class="footer-alt">
+            <p>&copy; 2026 Garanti BBVA Projesi. Tüm hakları saklıdır. Berat Yıldırım - 221120251038</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
